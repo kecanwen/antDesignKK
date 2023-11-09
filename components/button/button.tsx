@@ -316,7 +316,7 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (pr
   return wrapSSR(buttonNode);
 };
 
-//20231108学习组件
+//用React.forward将InternalButton包装成支持ref的形式
 const Button = React.forwardRef<unknown, ButtonProps>(InternalButton) as CompoundedComponent;
 if (process.env.NODE_ENV !== 'production') {
   Button.displayName = 'Button';
