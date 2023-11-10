@@ -128,7 +128,8 @@ export type NativeButtonProps = {
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
   Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
-
+  
+//Partial<T> 是一个内置的类型工具，用于将类型 T 中的所有属性变为可选的。它会创建一个新的类型，其中所有的属性都变为可选的。
 export type ButtonProps = Partial<AnchorButtonProps & NativeButtonProps>;
 
 type CompoundedComponent = React.ForwardRefExoticComponent<
